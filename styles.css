@@ -1,0 +1,276 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background: #eef5f1;
+  color: #1c2b25;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    linear-gradient(135deg, rgba(239, 247, 242, 0.95), rgba(234, 241, 248, 0.95)),
+    url("https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(1120px, calc(100% - 32px));
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.quiz-panel,
+.review-panel {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(28, 43, 37, 0.12);
+  box-shadow: 0 24px 60px rgba(36, 54, 47, 0.18);
+  border-radius: 8px;
+}
+
+.quiz-panel {
+  padding: clamp(24px, 4vw, 44px);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #3f6f63;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.05;
+}
+
+.score-card {
+  min-width: 112px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #173d35;
+  color: #fff;
+  text-align: right;
+}
+
+.score-label {
+  display: block;
+  font-size: 0.72rem;
+  opacity: 0.78;
+}
+
+.score-card strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 1.25rem;
+}
+
+.progress-wrap {
+  height: 10px;
+  margin: 28px 0;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #dce8e2;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: #f4b942;
+  transition: width 180ms ease;
+}
+
+.question-card {
+  min-height: 360px;
+}
+
+.question-number {
+  margin: 0 0 10px;
+  color: #60746e;
+  font-weight: 700;
+}
+
+.question-card h2 {
+  min-height: 88px;
+  margin: 0 0 24px;
+  font-size: clamp(1.5rem, 3vw, 2.45rem);
+  line-height: 1.25;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.choice-button {
+  min-height: 72px;
+  padding: 16px;
+  border: 2px solid #c9d9d2;
+  border-radius: 8px;
+  background: #fff;
+  color: #1c2b25;
+  cursor: pointer;
+  font-size: 1.08rem;
+  font-weight: 700;
+  text-align: left;
+  transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+}
+
+.choice-button:hover:not(:disabled),
+.choice-button:focus-visible {
+  border-color: #3f6f63;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.choice-button.correct {
+  border-color: #2e8b57;
+  background: #e7f6ee;
+}
+
+.choice-button.wrong {
+  border-color: #d15353;
+  background: #fff0f0;
+}
+
+.choice-button:disabled {
+  cursor: default;
+}
+
+.feedback {
+  min-height: 30px;
+  margin: 18px 0 0;
+  font-weight: 700;
+}
+
+.feedback.good {
+  color: #24724b;
+}
+
+.feedback.bad {
+  color: #b63f3f;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.primary-button,
+.ghost-button {
+  min-height: 46px;
+  border-radius: 8px;
+  padding: 0 18px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.primary-button {
+  border: 0;
+  background: #173d35;
+  color: #fff;
+}
+
+.primary-button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.ghost-button {
+  border: 1px solid #b9ccc4;
+  background: #fff;
+  color: #173d35;
+}
+
+.review-panel {
+  align-self: stretch;
+  padding: 24px;
+}
+
+.review-panel h2 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+}
+
+.review-panel p {
+  margin: 0 0 18px;
+  color: #60746e;
+  line-height: 1.6;
+}
+
+#reviewList {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#reviewList li {
+  padding: 12px;
+  border-radius: 8px;
+  background: #f3f7f5;
+  border: 1px solid #dce8e2;
+}
+
+#reviewList strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 820px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    align-items: start;
+    padding: 20px 0;
+  }
+
+  .top-bar {
+    flex-direction: column;
+  }
+
+  .score-card {
+    width: 100%;
+    text-align: left;
+  }
+
+  .choices {
+    grid-template-columns: 1fr;
+  }
+
+  .question-card {
+    min-height: auto;
+  }
+}
