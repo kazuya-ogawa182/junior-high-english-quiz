@@ -84,6 +84,11 @@ function shuffle(items) {
   return [...items].sort(() => Math.random() - 0.5);
 }
 
+function isCorrectChoice(choice, item) {
+  const acceptedMeanings = item.meaning.split("、").map((meaning) => meaning.trim());
+  return choice === item.meaning || acceptedMeanings.includes(choice);
+}
+
 function startQuiz() {
   state.order = shuffle(quizItems);
   state.index = 0;
@@ -125,7 +130,7 @@ function answer(choice, selectedButton) {
   }
 
   const item = state.order[state.index];
-  const isCorrect = choice === item.meaning;
+  const isCorrect = isCorrectChoice(choice, item);
   state.answered = true;
 
   if (isCorrect) {
@@ -141,7 +146,7 @@ function answer(choice, selectedButton) {
 
   [...choices.children].forEach((button) => {
     button.disabled = true;
-    if (button.textContent === item.meaning) {
+    if (isCorrectChoice(button.textContent, item)) {
       button.classList.add("correct");
     }
   });
