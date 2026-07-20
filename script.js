@@ -15,13 +15,13 @@ const quizItems = [
     word: "communicate",
     meaning: "伝え合う、意思疎通する",
     example: "People communicate in many languages.",
-    choices: ["比較する", "意思疎通する", "招待する", "準備する"]
+    choices: ["比較する", "伝え合う、意思疎通する", "招待する", "準備する"]
   },
   {
     word: "volunteer",
     meaning: "ボランティア、志願する",
     example: "She works as a volunteer every weekend.",
-    choices: ["観光客", "ボランティア", "科学者", "司会者"]
+    choices: ["観光客", "ボランティア、志願する", "科学者", "司会者"]
   },
   {
     word: "experience",
@@ -39,7 +39,7 @@ const quizItems = [
     word: "improve",
     meaning: "向上させる、よくなる",
     example: "Practice will improve your English.",
-    choices: ["失う", "向上させる", "借りる", "選ぶ"]
+    choices: ["失う", "向上させる、よくなる", "借りる", "選ぶ"]
   },
   {
     word: "technology",
@@ -57,7 +57,67 @@ const quizItems = [
     word: "respect",
     meaning: "尊敬する、尊重する",
     example: "We should respect different cultures.",
-    choices: ["尊重する", "修理する", "説明する", "反対する"]
+    choices: ["尊敬する、尊重する", "修理する", "説明する", "反対する"]
+  },
+  {
+    word: "decision",
+    meaning: "決定",
+    example: "Making a decision is sometimes difficult.",
+    choices: ["決定", "機会", "習慣", "約束"]
+  },
+  {
+    word: "opinion",
+    meaning: "意見",
+    example: "Please tell me your opinion.",
+    choices: ["意見", "規則", "目的", "記録"]
+  },
+  {
+    word: "continue",
+    meaning: "続ける",
+    example: "I will continue studying English.",
+    choices: ["続ける", "到着する", "集める", "忘れる"]
+  },
+  {
+    word: "situation",
+    meaning: "状況",
+    example: "We need to understand the situation.",
+    choices: ["状況", "住所", "方法", "将来"]
+  },
+  {
+    word: "purpose",
+    meaning: "目的",
+    example: "What is the purpose of this meeting?",
+    choices: ["目的", "人口", "理由", "景色"]
+  },
+  {
+    word: "culture",
+    meaning: "文化",
+    example: "Food is an important part of culture.",
+    choices: ["文化", "自然", "科学", "平和"]
+  },
+  {
+    word: "successful",
+    meaning: "成功した",
+    example: "The event was successful.",
+    choices: ["成功した", "危険な", "退屈な", "親切な"]
+  },
+  {
+    word: "available",
+    meaning: "利用できる、手に入る",
+    example: "This book is available at the library.",
+    choices: ["利用できる、手に入る", "興味深い", "十分な", "正直な"]
+  },
+  {
+    word: "suggest",
+    meaning: "提案する",
+    example: "Can you suggest a good place to visit?",
+    choices: ["提案する", "参加する", "許す", "修理する"]
+  },
+  {
+    word: "responsible",
+    meaning: "責任がある",
+    example: "You are responsible for your actions.",
+    choices: ["責任がある", "人気がある", "必要な", "静かな"]
   }
 ];
 
