@@ -118,6 +118,36 @@ const quizItems = [
     meaning: "責任がある",
     example: "You are responsible for your actions.",
     choices: ["責任がある", "人気がある", "必要な", "静かな"]
+  },
+  {
+    word: "consequence",
+    meaning: "結果、影響",
+    example: "We must consider the consequences of our actions.",
+    choices: ["原因、理由", "結果、影響", "条件、制限", "目標、目的"]
+  },
+  {
+    word: "significant",
+    meaning: "重要な、かなりの",
+    example: "The new policy had a significant effect on the economy.",
+    choices: ["一時的な", "正確な", "重要な、かなりの", "明らかな"]
+  },
+  {
+    word: "contribute",
+    meaning: "貢献する、寄付する",
+    example: "Everyone can contribute to protecting the environment.",
+    choices: ["貢献する、寄付する", "競争する", "要求する", "予測する"]
+  },
+  {
+    word: "maintain",
+    meaning: "維持する",
+    example: "Regular exercise helps us maintain good health.",
+    choices: ["取り替える", "減少させる", "発見する", "維持する"]
+  },
+  {
+    word: "perspective",
+    meaning: "観点、見方",
+    example: "Traveling abroad can give you a new perspective.",
+    choices: ["証拠、根拠", "観点、見方", "利益、利点", "能力、才能"]
   }
 ];
 
