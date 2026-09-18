@@ -148,6 +148,12 @@ const quizItems = [
     meaning: "観点、見方",
     example: "Traveling abroad can give you a new perspective.",
     choices: ["証拠、根拠", "観点、見方", "利益、利点", "能力、才能"]
+  },
+  {
+    word: "opportunity",
+    meaning: "機会",
+    example: "This is a good opportunity to learn English.",
+    choices: ["約束", "機会", "習慣", "決定"]
   }
 ];
 
